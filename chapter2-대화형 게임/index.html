@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>대화형 게임</title>
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="player_inventory">
+  <span class="item-container"><h3>인벤토리:</h3>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+  </span>
+</div>
+<div id="steps-taken">
+  <h3>방문기록:</h3>
+  <ul id='steps'>
+  </ul>
+</div>
+
+<div id="impress">
+    <div id="slide1" class="step slide">
+      <div class="slide-text">
+        <p>저기 타임머신이 있습니다. 스위치를 켜겠습니까?</p>
+        <p><a href='#slide2'>스위치를 켠다.</a> </p>
+        <p><a href='#slide3'>기다린다.</a> 과학자인 아버지께서 퇴근하시면 도와줄 것이다..</p>
+        <div class="event-text"></div>
+     </div>
+     <div class="menu item-container"><div class="inventory-box"><img src="bat.png" alt="bat" class="item" id="bat"></div></div>
+    </div>
+    <div id="slide2" class="step slide" data-x="1500">
+      <div class="slide-text">
+        <p>헉, 공룡이다! 뭔가 있으면 좋겠는데....</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><div class="inventory-box"><img src="dino.png" alt="dino" class="item" id="dino"></div></div>
+    </div>
+    <div id="slide3" class="step slide" data-x="-1500">
+      <div class="slide-text">
+        <p>조금 기다리니 아버지께서 집에 오셨다.</p>
+        <p>아버지께서 숙제를 도와주셨다.</p>
+        <p>조금 재밌었지만, 아쉬웠다..</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><a href="#" onclick='location = window.location.pathname; return false;'>START OVER</a></div>
+      </div>
+</div>
+
+<script src="impress.js"></script>
+<script>impress().init();</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
+<script src="jquery.raptorize.1.0.js"></script>
+
+<script src="game.js"></script>
+<script src="dragDrop.js"></script>
+
+</body>
+</html>
